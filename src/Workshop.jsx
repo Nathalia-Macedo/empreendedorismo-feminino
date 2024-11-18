@@ -39,7 +39,6 @@ const AnimatedNumber = ({ value }) => {
 
 const AdPlaceholder = () => (
   <div className=" mt-6 bg-white/10 backdrop-blur-md p-4 rounded-lg text-center text-white mb-4">
-    <p>Advertisement Space</p>
   </div>
 );
 
