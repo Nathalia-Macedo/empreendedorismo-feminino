@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFemale, FaLaptopCode, FaNetworkWired, FaMoneyBillWave, FaChalkboardTeacher, FaChartLine, FaArrowLeft, FaArrowRight, FaGithub, FaLinkedin, FaInstagram, FaQuestionCircle, FaArrowDown } from 'react-icons/fa';
 import { MdTimeline } from 'react-icons/md';
+import {useSwipeable} from 'react-swipeable'
 import confetti from 'canvas-confetti';
 import './App/App.css'
 const sections = [
@@ -13,6 +14,8 @@ const sections = [
   { id: 'faq', title: 'Dúvidas Frequentes', icon: <FaQuestionCircle /> },
   { id: 'conclusion', title: 'Encerramento Prático', icon: <MdTimeline /> },
 ];
+
+
 
 const AnimatedNumber = ({ value }) => {
   const [displayValue, setDisplayValue] = useState(0);
@@ -86,7 +89,7 @@ const WorkshopCover = ({ onStart }) => (
     exit={{ opacity: 0 }}
   >
     <motion.h1 
-      className="text-6xl font-bold mb-6 text-center"
+      className="text-3xl font-bold mb-6 text-center"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2 }}
@@ -119,7 +122,7 @@ const FAQSection = () => {
   const [activeCategory, setActiveCategory] = useState('backend');
   const [activeQuestion, setActiveQuestion] = useState(null);
 
-  const faqData = {
+   const faqData = {
     "backend": [
       {
         "question": "Quanto cobrar para criar uma API no back-end?",
@@ -635,6 +638,22 @@ const WorkshopAvancado = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [showCover, setShowCover] = useState(true);
 
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (activeSection < sections.length - 1) {
+        setActiveSection(activeSection + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (activeSection > 0) {
+        setActiveSection(activeSection - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
   const nextSection = () => {
     setActiveSection((prev) => (prev + 1) % sections.length);
   };
@@ -654,8 +673,8 @@ const WorkshopAvancado = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-purple-600 to-pink-600 min-h-screen overflow-hidden text-white">
-      <header className="fixed top-0 left-0 right-0 bg-white/10 backdrop-blur-md shadow-md z-50">
+<div {...swipeHandlers} className="bg-gradient-to-br from-purple-600 to-pink-600 min-h-screen overflow-hidden text-white">
+        <header className="fixed top-0 left-0 right-0 bg-white/10 backdrop-blur-md shadow-md z-50">
         <nav className="container mx-auto px-6 py-3">
           <ul className="flex justify-between items-center">
             {sections.map((section, index) => (
@@ -706,7 +725,9 @@ const WorkshopAvancado = () => {
           background: rgba(255, 255, 255, 0.5);
         }
       `}</style>
-      <main className="pt-32 h-screen flex items-center justify-center">
+       
+      
+      <main  className="pt-10 h-screen flex items-center justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
@@ -716,11 +737,11 @@ const WorkshopAvancado = () => {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8 max-w-4xl w-full mx-4 max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent"
           >
-            <h2 className="text-4xl font-bold mb-6 text-white">{sections[activeSection].title}</h2>
+            <h2 className="text-2xl font-bold mb-6 text-white">{sections[activeSection].title}</h2>
             
             {activeSection === 0 && (
               <>
-                <h3 className="text-2xl font-semibold mb-4 text-white">Por que o empreendedorismo feminino importa?</h3>
+                <h3 className="text-1xl font-semibold mb-4 text-white">Por que o empreendedorismo feminino importa?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <StatCard title="Profissionais de TI Mulheres" value="20" icon={<FaFemale />} />
                   <StatCard title="Aumento na Inovação" value="35" icon={<FaChartLine />} />
@@ -918,14 +939,14 @@ const WorkshopAvancado = () => {
 
         <button
           onClick={prevSection}
-          className="fixed left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-3 rounded-full shadow-lg hover:bg-white/30 transition duration-300"
+          className=" btn fixed left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-3 rounded-full shadow-lg hover:bg-white/30 transition duration-300"
           aria-label="Seção anterior"
         >
           <FaArrowLeft />
         </button>
         <button
           onClick={nextSection}
-          className="fixed right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-3 rounded-full shadow-lg hover:bg-white/30 transition duration-300"
+          className=" btn fixed right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-3 rounded-full shadow-lg hover:bg-white/30 transition duration-300"
           aria-label="Próxima seção"
         >
           <FaArrowRight />

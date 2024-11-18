@@ -1,3 +1,201 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Estilos gerais da barra de navegação */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+  
+  /* Lista de navegação */
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Itens de navegação */
+  nav li {
+    flex: 1;
+  }
+  
+  /* Botões de navegação */
+  nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Ícones de navegação */
+  nav button > div:first-child {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  /* Texto de navegação */
+  nav button > span {
+    font-size: 12px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    nav button {
+      padding: 5px;
+    }
+  
+    nav button > div:first-child {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  
+    nav button > span {
+      display: none;
+    }
+
+   .btn{
+    display: none;
+   }
+  }
+  /* Estilos base para todos os dispositivos */
+body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 1em;
+  }
+  
+  h3 {
+    font-size: 1.75em;
+  }
+  
+  h4 {
+    font-size: 1.5em;
+  }
+  
+  p, li, span {
+    font-size: 1em;
+  }
+  
+  /* Ajustes para dispositivos móveis */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.75em;
+    }
+  
+    h3 {
+      font-size: 1.5em;
+    }
+  
+    h4 {
+      font-size: 1.25em;
+    }
+  
+    p, li, span {
+      font-size: 0.9em;
+    }
+  
+    /* Ajuste para botões e elementos de navegação */
+    button, nav {
+      font-size: 0.85em;
+    }
+  }
+  
+  /* Ajustes adicionais para telas muito pequenas */
+  @media (max-width: 480px) {
+    body {
+      font-size: 13px;
+    }
+  
+    h1 {
+      font-size: 1.75em;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    h3 {
+      font-size: 1.25em;
+    }
+  
+    h4 {
+      font-size: 1.1em;
+    }
+  
+    p, li, span {
+      font-size: 0.85em;
+    }
+  
+    /* Ajuste para botões e elementos de navegação */
+    button, nav {
+      font-size: 0.8em;
+    }
+  }
+  /* Estilos existentes permanecem inalterados */
+
+/* Ocultar setas de navegação em dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-arrow {
+      display: none;
+    }
+  
+    .content-container {
+      touch-action: pan-y;
+      user-select: none;
+    }
+  
+    .workshop-main {
+      overflow-x: hidden;
+    }
+  }
+  
+  /* Adicionar indicador visual de arrastar */
+  @media (max-width: 768px) {
+    .swipe-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+  
+    .swipe-indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      transition: background-color 0.3s ease;
+    }
+  
+    .swipe-indicator-dot.active {
+      background-color: white;
+    }
+  }
