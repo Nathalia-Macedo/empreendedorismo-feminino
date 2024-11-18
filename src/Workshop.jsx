@@ -37,6 +37,12 @@ const AnimatedNumber = ({ value }) => {
   return <span>{displayValue}</span>;
 };
 
+const AdPlaceholder = () => (
+  <div className=" mt-6 bg-white/10 backdrop-blur-md p-4 rounded-lg text-center text-white mb-4">
+    <p>Advertisement Space</p>
+  </div>
+);
+
 const StatCard = ({ title, value, icon }) => (
   <motion.div 
     className="bg-white/20 backdrop-blur-md rounded-lg shadow-lg p-6 flex items-center space-x-4"
@@ -756,6 +762,7 @@ const WorkshopAvancado = () => {
                   <h4 className="font-bold text-white">Exemplo inspirador:</h4>
                   <p className="text-gray-200">Reshma Saujani (fundadora da Girls Who Code)</p>
                 </motion.div>
+                <AdPlaceholder />
               </>
             )}
 
@@ -787,6 +794,7 @@ const WorkshopAvancado = () => {
                 >
                   <p className="font-bold text-white">Dica: Use o Canvas de Modelo de Negócios para estruturar suas ideias!</p>
                 </motion.div>
+                <AdPlaceholder/>
               </>
             )}
 
@@ -827,7 +835,9 @@ const WorkshopAvancado = () => {
                       <FaInstagram size={24} />
                     </a>
                   </div>
+                 
                 </motion.div>
+                <AdPlaceholder/>
               </>
             )}
 
@@ -857,13 +867,14 @@ const WorkshopAvancado = () => {
                   <li>Mulheres na Computação</li>
                   <li>PyLadies</li>
                 </ul>
+                <AdPlaceholder/>
               </>
             )}
 
             {activeSection === 4 && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4 text-white">Precificação por Hora</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-white">Precificação por Hora</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <div>
                       <h4 className="text-lg font-semibold mb-2 text-white">Dicas para precificar:</h4>
@@ -908,6 +919,7 @@ const WorkshopAvancado = () => {
                   <h4 className="font-bold text-white mb-2">Dica importante:</h4>
                   <p className="text-gray-200">Sempre faça um contrato claro, especificando o escopo do trabalho, prazos e condições de pagamento. Isso protege você e seu cliente!</p>
                 </motion.div>
+                <AdPlaceholder/>
               </div>
             )}
 
@@ -917,22 +929,46 @@ const WorkshopAvancado = () => {
 
             {activeSection === 6 && (
               <>
-                <h3 className="text-2xl font-semibold mb-4 text-white">Próximos passos</h3>
-                <ul className="list-disc list-inside mb-6 space-y-2 text-gray-200">
-                  <li>Defina seu MVP (Produto Mínimo Viável)</li>
-                  <li>Crie um plano de ação com metas claras</li>
-                  <li>Comece a construir sua presença online</li>
-                  <li>Participe de eventos e comunidades</li>
-                </ul>
-                <motion.div 
-                  className="bg-white/20 backdrop-blur-md p-4 rounded-lg"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
-                  <h4 className="font-bold text-white mb-2">Lembre-se:</h4>
-                  <p className="text-gray-200">Sua jornada é única. Celebre cada pequena vitória e aprenda com os desafios. Você está criando algo incrível!</p>
-                </motion.div>
-              </>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Próximos passos</h3>
+              
+              <div className="mb-6">
+                <h4 className="text-xl font-semibold mb-2 text-white">O que é um MVP (Produto Mínimo Viável)?</h4>
+                <p className="text-gray-200 mb-4">
+                  Um MVP é a versão mais simples do seu produto que ainda entrega valor ao cliente. 
+                  É uma estratégia para testar sua ideia no mercado com o mínimo de recursos e tempo.
+                </p>
+                
+                <h4 className="text-xl font-semibold mb-2 text-white">Como definir seu MVP:</h4>
+                <ol className="list-decimal list-inside space-y-2 text-gray-200 mb-4">
+                  <li>Identifique o problema principal que seu produto resolve</li>
+                  <li>Liste todas as funcionalidades que você imagina para o produto final</li>
+                  <li>Priorize essas funcionalidades, mantendo apenas as essenciais</li>
+                  <li>Defina os critérios mínimos de sucesso para seu MVP</li>
+                  <li>Crie um protótipo ou versão simplificada com essas funcionalidades essenciais</li>
+                </ol>
+              </div>
+            
+              <h4 className="text-xl font-semibold mb-2 text-white">Próximos passos após definir seu MVP:</h4>
+              <ul className="list-disc list-inside mb-6 space-y-2 text-gray-200">
+                <li>Crie um plano de ação com metas claras para desenvolver seu MVP</li>
+                <li>Comece a construir sua presença online para atrair early adopters</li>
+                <li>Participe de eventos e comunidades para obter feedback inicial</li>
+                <li>Prepare-se para coletar e analisar dados do uso do seu MVP</li>
+              </ul>
+            
+              <motion.div 
+                className="bg-white/20 backdrop-blur-md p-4 rounded-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <h4 className="font-bold text-white mb-2">Lembre-se:</h4>
+                <p className="text-gray-200">
+                  Seu MVP não precisa ser perfeito. O objetivo é aprender rapidamente e iterar. 
+                  Sua jornada é única, então celebre cada pequena vitória e aprenda com os desafios. 
+                  Você está criando algo incrível!
+                </p>
+              </motion.div>
+            </>
             )}
           </motion.div>
         </AnimatePresence>
