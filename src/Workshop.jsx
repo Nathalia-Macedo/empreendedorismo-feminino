@@ -87,42 +87,42 @@ const triggerFireworks = () => {
   }, 250);
 };
 
-const WorkshopCover = ({ onStart }) => (
-  <motion.div 
-    className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-600 to-pink-600 text-white"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-  >
-    <motion.h1 
-      className="text-3xl font-bold mb-6 text-center"
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.2 }}
-    >
-      Empreendedorismo Feminino na Programação
-    </motion.h1>
-    <motion.p 
-      className="text-2xl mb-12 text-center"
-      initial={{ y: -30, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.4 }}
-    >
-      Um workshop para inspirar e capacitar
-    </motion.p>
-    <motion.button
-      className="bg-white text-purple-600 px-8 py-3 rounded-full text-xl font-semibold hover:bg-purple-100 transition duration-300"
-      onClick={onStart}
-      initial={{ y: 30, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.6 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      Começar Workshop
-    </motion.button>
-  </motion.div>
-);
+// const WorkshopCover = ({ onStart }) => (
+//   <motion.div 
+//     className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-600 to-pink-600 text-white"
+//     initial={{ opacity: 0 }}
+//     animate={{ opacity: 1 }}
+//     exit={{ opacity: 0 }}
+//   >
+//     <motion.h1 
+//       className="text-3xl font-bold mb-6 text-center"
+//       initial={{ y: -50, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ delay: 0.2 }}
+//     >
+//       Empreendedorismo Feminino na Programação
+//     </motion.h1>
+//     <motion.p 
+//       className="text-2xl mb-12 text-center"
+//       initial={{ y: -30, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ delay: 0.4 }}
+//     >
+//       Um workshop para inspirar e capacitar
+//     </motion.p>
+//     <motion.button
+//       className="bg-white text-purple-600 px-8 py-3 rounded-full text-xl font-semibold hover:bg-purple-100 transition duration-300"
+//       onClick={onStart}
+//       initial={{ y: 30, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ delay: 0.6 }}
+//       whileHover={{ scale: 1.05 }}
+//       whileTap={{ scale: 0.95 }}
+//     >
+//       Começar Workshop
+//     </motion.button>
+//   </motion.div>
+// );
 
 const FAQSection = () => {
   const [activeCategory, setActiveCategory] = useState('backend');
@@ -642,7 +642,7 @@ const FAQSection = () => {
 
 const WorkshopAvancado = () => {
   const [activeSection, setActiveSection] = useState(0);
-  const [showCover, setShowCover] = useState(true);
+  // const [showCover, setShowCover] = useState(true);
 
 
   const swipeHandlers = useSwipeable({
@@ -674,9 +674,9 @@ const WorkshopAvancado = () => {
     }
   }, [activeSection]);
 
-  if (showCover) {
-    return <WorkshopCover onStart={() => setShowCover(false)} />;
-  }
+  // if (showCover) {
+  //   return <WorkshopCover onStart={() => setShowCover(false)} />;
+  // }
 
   return (
 <div {...swipeHandlers} className="bg-gradient-to-br from-purple-600 to-pink-600 min-h-screen overflow-hidden text-white">
