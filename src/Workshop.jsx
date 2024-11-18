@@ -761,7 +761,19 @@ const WorkshopAvancado = () => {
                   <h4 className="font-bold text-white">Exemplo inspirador:</h4>
                   <p className="text-gray-200">Reshma Saujani (fundadora da Girls Who Code)</p>
                 </motion.div>
-                <AdPlaceholder />
+                <AdPlaceholder>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5353295040187805"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5353295040187805"
+     data-ad-slot="1178525386"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </AdPlaceholder>
               </>
             )}
 
@@ -793,7 +805,19 @@ const WorkshopAvancado = () => {
                 >
                   <p className="font-bold text-white">Dica: Use o Canvas de Modelo de Negócios para estruturar suas ideias!</p>
                 </motion.div>
-                <AdPlaceholder/>
+                <AdPlaceholder>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5353295040187805"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-gw-3+1f-3d+2z"
+     data-ad-client="ca-pub-5353295040187805"
+     data-ad-slot="1370759781"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </AdPlaceholder>
               </>
             )}
 
@@ -836,7 +860,18 @@ const WorkshopAvancado = () => {
                   </div>
                  
                 </motion.div>
-                <AdPlaceholder/>
+                <AdPlaceholder>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5353295040187805"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-5353295040187805"
+     data-ad-slot="4439776257"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </AdPlaceholder>
               </>
             )}
 
@@ -866,7 +901,19 @@ const WorkshopAvancado = () => {
                   <li>Mulheres na Computação</li>
                   <li>PyLadies</li>
                 </ul>
-                <AdPlaceholder/>
+                <AdPlaceholder>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5353295040187805"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-5353295040187805"
+     data-ad-slot="7879665103"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </AdPlaceholder>
               </>
             )}
 
@@ -918,7 +965,19 @@ const WorkshopAvancado = () => {
                   <h4 className="font-bold text-white mb-2">Dica importante:</h4>
                   <p className="text-gray-200">Sempre faça um contrato claro, especificando o escopo do trabalho, prazos e condições de pagamento. Isso protege você e seu cliente!</p>
                 </motion.div>
-                <AdPlaceholder/>
+                <AdPlaceholder>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5353295040187805"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-5353295040187805"
+     data-ad-slot="7879665103"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </AdPlaceholder>
               </div>
             )}
 
